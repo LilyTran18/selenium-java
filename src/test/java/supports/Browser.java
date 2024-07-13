@@ -3,6 +3,7 @@ package supports;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
@@ -25,7 +26,9 @@ public class Browser {
     public static void launchBrowser(String name){
         switch (name){
             case "chrome":{
-                driver= new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless=new");
+                driver= new ChromeDriver(chromeOptions);
                 break;
             }
             case "firefox": {

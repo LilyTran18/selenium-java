@@ -1,7 +1,10 @@
 <suite name="Form Authentication">
     <test name="login">
         <classes>
-            <class name="herokuapp.FormAuthen"/>
+            <class name="herokuapp.JavaScriptAlertTest"/>
+            <class name="herokuapp.TableTest"/>
+            <class name="herokuapp.BrokenImagesTest"/>
+            <class name="herokuapp.CheckBoxesTest"/>
         </classes>
     </test>
 </suite>
